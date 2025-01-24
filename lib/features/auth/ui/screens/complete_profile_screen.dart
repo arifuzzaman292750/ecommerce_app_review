@@ -1,4 +1,3 @@
-import 'package:ecommerce_app_review/features/auth/ui/screens/otp_verification_screen.dart';
 import 'package:ecommerce_app_review/features/auth/ui/widgets/app_logo_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -50,7 +49,7 @@ class _CompleteProfileScreenState extends State<CompleteProfileScreen> {
               SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  if(_formKey.currentState!.validate()) {}
+                  // if(_formKey.currentState!.validate()) {}
                 },
                 child: Text('Complete'),
               ),
