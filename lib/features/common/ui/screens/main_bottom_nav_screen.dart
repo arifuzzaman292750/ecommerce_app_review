@@ -13,6 +13,7 @@ class MainBottomNavScreen extends StatefulWidget {
 }
 
 class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
+
   final List<Widget> _screens = [
     HomeScreen(),
     HomeScreen(),
@@ -24,23 +25,23 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   Widget build(BuildContext context) {
     return GetBuilder<MainBottomNavController>(
         builder: (mainBottomNavController) {
-      return Scaffold(
-        body: _screens[mainBottomNavController.selectedIndex],
-        bottomNavigationBar: NavigationBar(
-          selectedIndex: mainBottomNavController.selectedIndex,
-          onDestinationSelected: mainBottomNavController.changeIndex,
-          destinations: [
-            NavigationDestination(
-                icon: Icon(Icons.home_outlined), label: 'Home'),
-            NavigationDestination(
-                icon: Icon(Icons.category_outlined), label: 'Categories'),
-            NavigationDestination(
-                icon: Icon(Icons.shopping_cart_outlined), label: 'Cart'),
-            NavigationDestination(
-                icon: Icon(Icons.favorite_outline), label: 'Wish'),
-          ],
-        ),
-      );
-    });
+          return Scaffold(
+            body: _screens[mainBottomNavController.selectedIndex],
+            bottomNavigationBar: NavigationBar(
+              selectedIndex: mainBottomNavController.selectedIndex,
+              onDestinationSelected: mainBottomNavController.changeIndex,
+              destinations: [
+                NavigationDestination(
+                  icon: Icon(Icons.home_outlined), label: 'Home',),
+                NavigationDestination(
+                  icon: Icon(Icons.category_outlined), label: 'Categories',),
+                NavigationDestination(
+                  icon: Icon(Icons.shopping_cart_outlined), label: 'Cart',),
+                NavigationDestination(
+                  icon: Icon(Icons.favorite_outline), label: 'Wish',),
+              ],
+            ),
+          );
+        });
   }
 }
