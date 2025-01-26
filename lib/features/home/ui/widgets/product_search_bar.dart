@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeSearchBar extends StatelessWidget {
-  const HomeSearchBar({
+class ProductSearchBar extends StatelessWidget {
+  const ProductSearchBar({
     super.key,
     required this.controller,
   });
