@@ -1,12 +1,14 @@
 import 'package:ecommerce_app_review/app/assets_path.dart';
+import 'package:ecommerce_app_review/features/common/controllers/main_bottom_nav_controller.dart';
 import 'package:ecommerce_app_review/features/common/ui/widgets/home_section_header.dart';
 import 'package:ecommerce_app_review/features/home/ui/widgets/app_bar_icon_button.dart';
 import 'package:ecommerce_app_review/features/common/ui/widgets/category_item_widget.dart';
 import 'package:ecommerce_app_review/features/home/ui/widgets/home_carousel_slider.dart';
-import 'package:ecommerce_app_review/features/home/ui/widgets/product_item_widget.dart';
+import 'package:ecommerce_app_review/features/common/ui/widgets/product_item_widget.dart';
 import 'package:ecommerce_app_review/features/home/ui/widgets/product_search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -37,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
               HomeCarouselSlider(),
               HomeSectionHeader(
                 title: 'All Categories',
-                onTap: () {},
+                onTap: () {
+                  Get.find<MainBottomNavController>().moveToCategory();
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
