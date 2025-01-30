@@ -6,7 +6,13 @@ import 'package:ecommerce_app_review/features/auth/ui/screens/otp_verification_s
 import 'package:ecommerce_app_review/features/auth/ui/screens/splash_screen.dart';
 import 'package:ecommerce_app_review/features/category/ui/screens/category_list_screen.dart';
 import 'package:ecommerce_app_review/features/common/ui/screens/main_bottom_nav_screen.dart';
+import 'package:ecommerce_app_review/features/home/ui/screens/new_product_list_screen.dart';
+import 'package:ecommerce_app_review/features/home/ui/screens/popular_product_list_screen.dart';
+import 'package:ecommerce_app_review/features/home/ui/screens/special_product_list_screen.dart';
+import 'package:ecommerce_app_review/features/product/ui/screens/create_review_screen.dart';
+import 'package:ecommerce_app_review/features/product/ui/screens/product_details_screen.dart';
 import 'package:ecommerce_app_review/features/product/ui/screens/product_list_screen.dart';
+import 'package:ecommerce_app_review/features/product/ui/screens/product_reviews_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -39,6 +45,19 @@ class CraftyBay extends StatelessWidget {
         } else if (settings.name == ProductListScreen.name) {
           String name = settings.arguments as String;
           widget = ProductListScreen(categoryName: name);
+        } else if (settings.name == PopularProductListScreen.name) {
+          widget = PopularProductListScreen();
+        } else if (settings.name == SpecialProductListScreen.name) {
+          widget = SpecialProductListScreen();
+        } else if (settings.name == NewProductListScreen.name) {
+          widget = NewProductListScreen();
+        } else if (settings.name == ProductDetailsScreen.name) {
+          int productId = settings.arguments as int;
+          widget = ProductDetailsScreen(productId: productId);
+        } else if (settings.name == ProductReviewsScreen.name) {
+          widget = ProductReviewsScreen();
+        } else if (settings.name == CreateReviewScreen.name) {
+          widget = CreateReviewScreen();
         }
         return MaterialPageRoute(
           builder: (ctx) {

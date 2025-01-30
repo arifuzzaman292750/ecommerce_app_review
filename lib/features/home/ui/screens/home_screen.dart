@@ -1,6 +1,9 @@
 import 'package:ecommerce_app_review/app/assets_path.dart';
 import 'package:ecommerce_app_review/features/common/controllers/main_bottom_nav_controller.dart';
 import 'package:ecommerce_app_review/features/common/ui/widgets/home_section_header.dart';
+import 'package:ecommerce_app_review/features/home/ui/screens/new_product_list_screen.dart';
+import 'package:ecommerce_app_review/features/home/ui/screens/popular_product_list_screen.dart';
+import 'package:ecommerce_app_review/features/home/ui/screens/special_product_list_screen.dart';
 import 'package:ecommerce_app_review/features/home/ui/widgets/app_bar_icon_button.dart';
 import 'package:ecommerce_app_review/features/common/ui/widgets/category_item_widget.dart';
 import 'package:ecommerce_app_review/features/home/ui/widgets/home_carousel_slider.dart';
@@ -51,7 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               HomeSectionHeader(
                 title: 'Popular',
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, PopularProductListScreen.name);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -61,7 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               HomeSectionHeader(
                 title: 'Special',
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, SpecialProductListScreen.name);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
@@ -71,7 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               HomeSectionHeader(
                 title: 'New',
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, NewProductListScreen.name);
+                },
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
