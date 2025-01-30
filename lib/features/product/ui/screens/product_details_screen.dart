@@ -1,8 +1,9 @@
+import 'package:demo_package/demo_package.dart';
 import 'package:ecommerce_app_review/app/app_colors.dart';
 import 'package:ecommerce_app_review/features/product/ui/screens/product_reviews_screen.dart';
 import 'package:ecommerce_app_review/features/product/ui/widgets/color_picker_widget.dart';
 import 'package:ecommerce_app_review/features/product/ui/widgets/product_image_carousel_slider.dart';
-import 'package:ecommerce_app_review/features/common/ui/widgets/product_quantity_inc_dec_button.dart';
+
 import 'package:ecommerce_app_review/features/product/ui/widgets/size_picker_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -47,7 +48,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                                 style: textTheme.titleMedium,
                               ),
                             ),
-                            ProductQuantityIncDecButton(
+                            QuantityIncDecButton(
+                              color: AppColors.themeColor,
                               onChange: (int value) {},
                             ),
                           ],

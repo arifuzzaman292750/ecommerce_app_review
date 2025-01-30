@@ -65,6 +65,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  demo_package:
+    dependency: "direct main"
+    description:
+      path: "../demo_package"
+      relative: true
+    source: path
+    version: "0.0.1"
   email_validator:
     dependency: "direct main"
     description:
@@ -284,10 +291,10 @@ packages:
     dependency: transitive
     description:
       name: vector_graphics
-      sha256: "27d5fefe86fb9aace4a9f8375b56b3c292b64d8c04510df230f849850d912cb7"
+      sha256: "7ed22c21d7fdcc88dd6ba7860384af438cd220b251ad65dfc142ab722fabef61"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.15"
+    version: "1.1.16"
   vector_graphics_codec:
     dependency: transitive
     description:
@@ -337,5 +344,5 @@ packages:
     source: hosted
     version: "6.5.0"
 sdks:
-  dart: ">=3.6.0 <4.0.0"
+  dart: ">=3.6.1 <4.0.0"
   flutter: ">=3.22.0"

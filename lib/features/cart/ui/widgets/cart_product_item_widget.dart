@@ -1,6 +1,6 @@
+import 'package:demo_package/demo_package.dart';
 import 'package:ecommerce_app_review/app/app_colors.dart';
 import 'package:ecommerce_app_review/app/assets_path.dart';
-import 'package:ecommerce_app_review/features/common/ui/widgets/product_quantity_inc_dec_button.dart';
 import 'package:flutter/material.dart';
 
 class CartProductItemWidget extends StatelessWidget {
@@ -69,7 +69,8 @@ class CartProductItemWidget extends StatelessWidget {
                           color: AppColors.themeColor,
                         ),
                       ),
-                      ProductQuantityIncDecButton(
+                      QuantityIncDecButton(
+                        color: AppColors.themeColor,
                         onChange: (int noOfItems) {},
                       ),
                     ],
